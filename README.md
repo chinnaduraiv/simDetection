@@ -12,10 +12,13 @@ For help getting started with Flutter development, view the
 [online documentation](https://flutter.dev/docs), which offers tutorials, samples, guidance on
 mobile development, and a full API reference.
 
-var listOfActivateSim = await _simeDetectionPlugin.getActiveSim()
+## To get the list of sim  
+* var listOfActivateSim = await _simeDetectionPlugin.getActiveSim()
 
-await _simeDetectionPlugin.sendSMS(
-selectedSimName: customizedValues[index]
-['displayName'], selectedSimIndex: customizedValues[index]
-['simSlotIndex'], toMobileNumber: '+919585313659', description: 'encryptedText'); }
+## To send SMS with arguments 
+
+* await _simeDetectionPlugin.sendSMS(
+    selectedSimName: customizedValues[index]
+    ['displayName'], selectedSimIndex: customizedValues[index]
+    ['simSlotIndex'], toMobileNumber: '+919585313659', description: 'encryptedText'); }
 
