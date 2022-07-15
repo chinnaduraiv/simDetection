@@ -1,6 +1,6 @@
 name: sim_detection
 description: Sim Detection Plugin
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/chinnaduraiv/simDetection.git
 
 environment:
