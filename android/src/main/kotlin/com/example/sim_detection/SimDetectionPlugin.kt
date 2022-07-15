@@ -42,15 +42,12 @@ class SimDetectionPlugin : FlutterPlugin, MethodCallHandler {
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
             "activeSubscriptionInfoList" -> {
-//                result.success("Android Chinnadurai")
-//                result.success("Android ${android.os.Build.VERSION.RELEASE}")
                 val results = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
                     getSIMModules()
                 } else {
                     TODO("VERSION.SDK_INT < LOLLIPOP_MR1")
                 } // Whatever single sim / double sim
                 result.success(results)
-//                result.success("Android ${android.os.Build.VERSION.RELEASE}")
             }
             "SMS" -> {
                 call.argument<String>("selectedSimSlotName")?.let { name ->
